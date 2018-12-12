@@ -42,6 +42,9 @@ public class BalancingAct extends javax.swing.JFrame {
     int correct;
     int incorrect;
     
+    int avg;
+    int runs;
+    
     
     //String productTwo [];
     
@@ -50,9 +53,6 @@ public class BalancingAct extends javax.swing.JFrame {
      */
     public BalancingAct() {
         initComponents();
-    
-       
-    
     
     
        
@@ -318,9 +318,6 @@ public class BalancingAct extends javax.swing.JFrame {
     private void inputBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox1ActionPerformed
         int answerCoOne = Integer.parseInt(inputBox1.getText());
         
-        
-        //make array for coefficent
-        
     }//GEN-LAST:event_inputBox1ActionPerformed
 
     private void inputBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox2ActionPerformed
@@ -354,6 +351,58 @@ public class BalancingAct extends javax.swing.JFrame {
     }//GEN-LAST:event_inputBox8ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        
+        
+         String [] reactantOne = {
+            "Fe",
+            "Ni",
+            "Pb",
+            "K",
+            "H"
+        };
+        
+        String [] reactantTwo = {
+           "O",
+           "Fl",
+           "N",
+           "Cl",
+           "C"
+        };
+       
+        String [] productOne = {
+            "result1",
+            "result2",
+            "result3",
+            "result4",
+            "result5"
+        };    
+       
+        
+        
+       dontRepeat = new int[reactantOne.length];
+       numsPulled = 0;
+       
+
+        //for loop here? could just add to rand each time and start at a new random place every time
+    
+    //for (int i = 0; i < numRuns; i++)   {
+        
+    int rand = (int) (Math.random() * 4) + 1; // have to change the five, I had numRuns but I don't know   
+        
+    
+        isRepeated(rand);
+        if (isRepeated(rand) == true) {
+            //rand = (int) (Math.random() * 5) +1;
+            System.out.println("wrong"); // ave to figure out how to start it over if num repeats
+        }
+        else    {
+        outputbox12.setText(reactantOne[rand]);
+        outputbox13.setText(reactantTwo[rand]);
+        outputbox14.setText(productOne[rand]); 
+        System.out.println("nums printed");
+           
+        //button2ActionPerformed(evt);
+        
         System.out.println("second button pushed");
 
         int [] coefficient1 = {
@@ -444,12 +493,23 @@ public class BalancingAct extends javax.swing.JFrame {
             int avg = calculateAverage(correct, incorrect);
             System.out.println(avg);
             label2.setText("Your average score is " + avg + "%");
-        //}
-        
-        
-        //might have to make methods and call them at once similar to communiations
-    }//GEN-LAST:event_button2ActionPerformed
+            
+           
 
+        //} 
+        System.out.println("time through");
+        }//might have to make methods and call them at once similar to communiations
+        
+        runs++;
+        
+        if (runs == numRuns) {
+            label2.setText("Your final score is " + avg + "%. Reopen the window to restart.");
+        }
+        //this last code doesn't work and the numbers aren't saving or matching for any other ox, co, and form checks
+        
+        
+    }//GEN-LAST:event_button2ActionPerformed
+    
     private void outputbox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputbox12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_outputbox12ActionPerformed
@@ -457,60 +517,8 @@ public class BalancingAct extends javax.swing.JFrame {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
        
         
-        //for (int i = 0; i < numRuns; i++)   {
-        
-        int rand = (int) (Math.random() * 5) + 1; // have to change the five, I had numRuns but I don't know
-        
-         String [] reactantOne = {
-            "Fe",
-            "Ni",
-            "Pb",
-            "K",
-            "H"
-        };
-        
-        String [] reactantTwo = {
-           "O",
-           "Fl",
-           "N",
-           "Cl",
-           "C"
-        };
-       
-        String [] productOne = {
-            "result1",
-            "result2",
-            "result3",
-            "result4",
-            "result5"
-        };    
-       
-        
-        
-       dontRepeat = new int[reactantOne.length];
-       numsPulled = 0;
-       
+      
 
-        //for loop here? could just add to rand each time and start at a new random place every time
-       // for (int i = 0; i < numRuns; i++) {
-            
-        isRepeated(rand);
-        if (isRepeated(rand) == true) {
-            //rand = (int) (Math.random() * 5) +1;
-            System.out.println("wrong");
-        }
-        else    {
-        outputbox12.setText(reactantOne[rand]);
-        outputbox13.setText(reactantTwo[rand]);
-        outputbox14.setText(productOne[rand]); 
-        System.out.println("nums printed");
-           
-        button2ActionPerformed(evt);
-           /* if  (button2ActionPerformed(evt) == true)  {
-                System.out.println("worked");
-            } */
-        }
-        //}  
         
     }//GEN-LAST:event_button1ActionPerformed
 
