@@ -389,6 +389,11 @@ public class BalancingAct extends javax.swing.JFrame {
         
     int rand = (int) (Math.random() * 4) + 1; // have to change the five, I had numRuns but I don't know   
         
+    /*int rand = (int) (Math.random() * info.length);
+        while (isRepeated(rand))   {
+            rand = (int) (Math.random() * info.length);*/
+        
+    
     
         isRepeated(rand);
         if (isRepeated(rand) == true) {
@@ -498,7 +503,7 @@ public class BalancingAct extends javax.swing.JFrame {
 
         //} 
         System.out.println("time through");
-        }//might have to make methods and call them at once similar to communiations
+        }
         
         runs++;
         
