@@ -377,39 +377,6 @@ public class BalancingAct extends javax.swing.JFrame {
             "result5"
         };    
        
-        
-        
-       dontRepeat = new int[reactantOne.length];
-       numsPulled = 0;
-       
-
-        //for loop here? could just add to rand each time and start at a new random place every time
-    
-    //for (int i = 0; i < numRuns; i++)   {
-        
-    int rand = (int) (Math.random() * 4) + 1; // have to change the five, I had numRuns but I don't know   
-        
-    /*int rand = (int) (Math.random() * info.length);
-        while (isRepeated(rand))   {
-            rand = (int) (Math.random() * info.length);*/
-        
-    
-    
-        isRepeated(rand);
-        if (isRepeated(rand) == true) {
-            //rand = (int) (Math.random() * 5) +1;
-            System.out.println("wrong"); // ave to figure out how to start it over if num repeats
-        }
-        else    {
-        outputbox12.setText(reactantOne[rand]);
-        outputbox13.setText(reactantTwo[rand]);
-        outputbox14.setText(productOne[rand]); 
-        System.out.println("nums printed");
-           
-        //button2ActionPerformed(evt);
-        
-        System.out.println("second button pushed");
-
         int [] coefficient1 = {
             1,
             2,
@@ -481,6 +448,39 @@ public class BalancingAct extends javax.swing.JFrame {
             4,
             5
         };
+        
+       dontRepeat = new int[reactantOne.length];
+       numsPulled = 0;
+       
+
+        //for loop here? could just add to rand each time and start at a new random place every time
+    
+    //for (int i = 0; i < numRuns; i++)   {
+        
+    int rand = (int) (Math.random() * 5.0) + 1; // have to change the five, I had numRuns but I don't know   
+        
+    /*int rand = (int) (Math.random() * info.length);
+        while (isRepeated(rand))   {
+            rand = (int) (Math.random() * info.length);*/
+        
+    
+    
+        isRepeated(rand);
+        if (isRepeated(rand) == true) {
+            //rand = (int) (Math.random() * 5) +1;
+            System.out.println("wrong"); // ave to figure out how to start it over if num repeats
+        }
+        else    {
+        outputbox12.setText(reactantOne[rand]);
+        outputbox13.setText(reactantTwo[rand]);
+        outputbox14.setText(productOne[rand]); 
+        System.out.println("nums printed");
+           
+        //button2ActionPerformed(evt);
+        
+        System.out.println("second button pushed");
+
+        
         
         //for (int i = 0; i < 10; i++) { // change the second parameter
             System.out.println("methods next");
