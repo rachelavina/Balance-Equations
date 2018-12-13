@@ -91,6 +91,7 @@ public class BalancingAct extends javax.swing.JFrame {
         outputbox14 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        button1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -183,6 +184,13 @@ public class BalancingAct extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel4.setText(" →");
 
+        button1.setText("jButton1");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -190,12 +198,7 @@ public class BalancingAct extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(label7, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(inputbox11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(101, 101, 101))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -227,22 +230,30 @@ public class BalancingAct extends javax.swing.JFrame {
                                         .addComponent(inputbox9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(78, 78, 78)))
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(114, 114, 114)))
-                .addComponent(inputbox10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(114, 114, 114)
+                        .addComponent(inputbox10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(label7, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(inputbox11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(121, 121, 121)))
                 .addGap(123, 123, 123))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(inputBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(outputbox14, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(inputBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(153, 153, 153))))
+                        .addGap(153, 153, 153))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(button1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(inputBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(outputbox14, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(inputBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(53, 53, 53))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -261,7 +272,8 @@ public class BalancingAct extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputbox11, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button1))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,28 +314,23 @@ public class BalancingAct extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void inputBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox1ActionPerformed
-        
-        
+   
     }//GEN-LAST:event_inputBox1ActionPerformed
 
     private void inputBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox2ActionPerformed
-        
-        
+ 
     }//GEN-LAST:event_inputBox2ActionPerformed
 
     private void inputBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox3ActionPerformed
-        
-        
+   
     }//GEN-LAST:event_inputBox3ActionPerformed
 
     private void inputBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox5ActionPerformed
-        
-        
+    
     }//GEN-LAST:event_inputBox5ActionPerformed
 
     private void inputBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox6ActionPerformed
-        
-        
+   
     }//GEN-LAST:event_inputBox6ActionPerformed
 
     private void inputBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox7ActionPerformed
@@ -331,36 +338,10 @@ public class BalancingAct extends javax.swing.JFrame {
     }//GEN-LAST:event_inputBox7ActionPerformed
 
     private void inputBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBox8ActionPerformed
-        
-        
+  
     }//GEN-LAST:event_inputBox8ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
-         runs++;
-        
-         String [] reactantOne = {
-            "Fe",
-            "Ni",
-            "Pb",
-            "K",
-            "H"
-        };
-        
-        String [] reactantTwo = {
-           "O",
-           "Fl",
-           "N",
-           "Cl",
-           "C"
-        };
-       
-        String [] productOne = {
-            "result1",
-            "result2",
-            "result3",
-            "result4",
-            "result5"
-        };    
        
         int [] coefficient1 = {
             1,
@@ -434,54 +415,35 @@ public class BalancingAct extends javax.swing.JFrame {
             5
         };
         
-        int numRuns = Integer.parseInt(inputbox11.getText());
         
-        int answerCoOne = Integer.parseInt(inputBox1.getText());
-        int answerCoTwo = Integer.parseInt(inputBox2.getText());
-        int answerCoThree = Integer.parseInt(inputBox3.getText());
-        int form1 = Integer.parseInt(inputBox5.getText());
-        int form2 = Integer.parseInt(inputBox6.getText());
-        int form3 = Integer.parseInt(inputBox7.getText());
-        int ox1 = Integer.parseInt(inputBox8.getText());
-        int ox2 = Integer.parseInt(inputbox9.getText());
-        int ox3 = Integer.parseInt(inputbox10.getText()); 
+        answerCoOne = Integer.parseInt(inputBox1.getText());
+        answerCoTwo = Integer.parseInt(inputBox2.getText());
+        answerCoThree = Integer.parseInt(inputBox3.getText());
+        form1 = Integer.parseInt(inputBox5.getText());
+        form2 = Integer.parseInt(inputBox6.getText());
+        form3 = Integer.parseInt(inputBox7.getText());
+        ox1 = Integer.parseInt(inputBox8.getText());
+        ox2 = Integer.parseInt(inputbox9.getText());
+        ox3 = Integer.parseInt(inputbox10.getText()); 
         
-        
-        dontRepeat = new int[reactantOne.length];
-        numsPulled = 0;
        
+   //for (int i = 0; i < numRuns; i++)   {
+        
+       //if (i == numRuns) {
+      //      label2.setText("Your final score is " + avg + "%. Reopen the window to restart.");
+       // }
+        
+        
+        
 
-        //for loop here? could just add to rand each time and start at a new random place every time
-    
-    //for (int i = 0; i < numRuns; i++)   {
         
-    int rand = (int) (Math.random() * 5) + 1; // have to change the five, I had numRuns but I don't know   
         
-    /*int rand = (int) (Math.random() * info.length);
-        while (isRepeated(rand))   {
-            rand = (int) (Math.random() * info.length);*/
-        //for (int i = 0; i < numRuns; i++) {
-        isRepeated(rand);
-        if (isRepeated(rand) == true) {
-            //rand = (int) (Math.random() * 5) +1;
-            System.out.println("wrong"); // ave to figure out how to start it over if num repeats
-        }
-        else    {
-        outputbox12.setText(reactantOne[rand]);
-        outputbox13.setText(reactantTwo[rand]);
-        outputbox14.setText(productOne[rand]); 
-        System.out.println("nums printed");
            
         //button2ActionPerformed(evt);
-        
-        System.out.println("second button pushed");
 
-        
-        
-        //for (int i = 0; i < 10; i++) { // change the second parameter
             System.out.println("methods next");
             
-            if (answerCoOne == coefficient1[rand] && answerCoTwo == coefficient2[rand] && answerCoThree == coefficient3[rand] && form1 == formula1[rand] && form2 == formula2[rand] && form3 == formula3[rand] && ox1 == oxidation1[rand] && ox2 == oxidation2[rand] && ox3 == oxidation3[rand]) {
+            if (answerCoOne == coefficient1[0] && answerCoTwo == coefficient2[0] && answerCoThree == coefficient3[0] && form1 == formula1[0] && form2 == formula2[0] && form3 == formula3[0] && ox1 == oxidation1[0] && ox2 == oxidation2[0] && ox3 == oxidation3[0]) {
                System.out.println("correct");
                correct++;
             }
@@ -499,16 +461,17 @@ public class BalancingAct extends javax.swing.JFrame {
 
         //} 
         System.out.println("time through");
-        }
+        
+    //for loop bracket
+   // }
         
        
         
-        if (runs == numRuns) {
-            label2.setText("Your final score is " + avg + "%. Reopen the window to restart.");
-        }
-        //this last code doesn't work and the numbers aren't saving or matching for any other ox, co, and form checks
         
-        //}
+    
+     //this last code doesn't work and the numbers aren't saving or matching for any other ox, co, and form checks
+    
+        
     }//GEN-LAST:event_button2ActionPerformed
     
     private void outputbox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputbox12ActionPerformed
@@ -530,9 +493,53 @@ public class BalancingAct extends javax.swing.JFrame {
         
     }//GEN-LAST:event_inputbox10ActionPerformed
 
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        numRuns = Integer.parseInt(inputbox11.getText());
+       
+         String [] reactantOne = {
+            "Fe",
+            "Ni",
+            "Pb",
+            "K",
+            "H"
+        };
+        
+        String [] reactantTwo = {
+           "O",
+           "Fl",
+           "N",
+           "Cl",
+           "C"
+        };
+       
+        String [] productOne = {
+            "result1",
+            "result2",
+            "result3",
+            "result4",
+            "result5"
+        };    
+       
+        
+        
+        
+        dontRepeat = new int[reactantOne.length];
+        numsPulled = 0;
+       
+
+
+        
+        
+        outputbox12.setText(reactantOne[0]);
+        outputbox13.setText(reactantTwo[0]);
+        outputbox14.setText(productOne[0]); 
+        System.out.println("nums printed");
+        
+    }//GEN-LAST:event_button1ActionPerformed
+
     
     
-    public boolean isRepeated(int rand) {
+   /* public boolean isRepeated(int rand) {
         boolean repeat = dontRepeat.length > rand;
         for (int i = 0; i < dontRepeat.length; i++) {
             if (rand == dontRepeat[i]) {
@@ -544,7 +551,7 @@ public class BalancingAct extends javax.swing.JFrame {
         }
         
         return repeat;
-    }
+    }*/
     
     //I still don't know if this works
     public int calculateAverage(int correct, int incorrect)   { 
@@ -593,6 +600,7 @@ public class BalancingAct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton button1;
     private javax.swing.JButton button2;
     private javax.swing.JTextField inputBox1;
     private javax.swing.JTextField inputBox2;
