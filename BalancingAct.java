@@ -416,7 +416,7 @@ public class BalancingAct extends javax.swing.JFrame {
         };
         
         
-        answerCoOne = Integer.parseInt(inputBox1.getText());
+         answerCoOne = Integer.parseInt(inputBox1.getText());
         answerCoTwo = Integer.parseInt(inputBox2.getText());
         answerCoThree = Integer.parseInt(inputBox3.getText());
         form1 = Integer.parseInt(inputBox5.getText());
@@ -427,23 +427,16 @@ public class BalancingAct extends javax.swing.JFrame {
         ox3 = Integer.parseInt(inputbox10.getText()); 
         
        
-   //for (int i = 0; i < numRuns; i++)   {
-        
-       //if (i == numRuns) {
-      //      label2.setText("Your final score is " + avg + "%. Reopen the window to restart.");
-       // }
+    for (int i = 0; i < numRuns; i++)   {
         
         
-        
-
-        
-        
+       
            
         //button2ActionPerformed(evt);
 
             System.out.println("methods next");
             
-            if (answerCoOne == coefficient1[0] && answerCoTwo == coefficient2[0] && answerCoThree == coefficient3[0] && form1 == formula1[0] && form2 == formula2[0] && form3 == formula3[0] && ox1 == oxidation1[0] && ox2 == oxidation2[0] && ox3 == oxidation3[0]) {
+            if (answerCoOne == coefficient1[i] && answerCoTwo == coefficient2[i] && answerCoThree == coefficient3[i] && form1 == formula1[i] && form2 == formula2[i] && form3 == formula3[i] && ox1 == oxidation1[i] && ox2 == oxidation2[i] && ox3 == oxidation3[i]) {
                System.out.println("correct");
                correct++;
             }
@@ -452,20 +445,17 @@ public class BalancingAct extends javax.swing.JFrame {
                 System.out.println("incorrect");
                 incorrect++;
             }
-            
-            int avg = calculateAverage(correct, incorrect);
-            System.out.println(avg);
-            label2.setText("Your average score is " + avg + "%");
-            
-           
 
-        //} 
         System.out.println("time through");
         
-    //for loop bracket
-   // }
+    if (i == numRuns) {
+            label2.setText("Your final score is " + avg + "%. Reopen the window to restart.");
+       }
+    }
         
-       
+        avg = calculateAverage(correct, incorrect);
+            System.out.println(avg);
+            label2.setText("Your average score is " + avg + "%");
         
         
     
@@ -525,16 +515,14 @@ public class BalancingAct extends javax.swing.JFrame {
         
         dontRepeat = new int[reactantOne.length];
         numsPulled = 0;
-       
-
-
         
+        //for (int i = 0; i < numRuns; i++) {
         
         outputbox12.setText(reactantOne[0]);
         outputbox13.setText(reactantTwo[0]);
         outputbox14.setText(productOne[0]); 
         System.out.println("nums printed");
-        
+        //}
     }//GEN-LAST:event_button1ActionPerformed
 
     
