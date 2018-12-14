@@ -43,7 +43,9 @@ public class BalancingAct extends javax.swing.JFrame {
     int incorrect;
     
     int avg;
-    //int runs;
+    
+    String print;
+    int runs;
     
     
     //String productTwo [];
@@ -54,11 +56,28 @@ public class BalancingAct extends javax.swing.JFrame {
     public BalancingAct() {
         initComponents();
     
+           
+       
+        
+        
+        
+        //dontRepeat = new int[reactantOne.length];
+        //numsPulled = 0;
+        
+        //for (int i = 0; i < numRuns; i++) {
+        
+        
+        //}
+        
+        
+        
+        
+        
     
-       outputbox12.setText("Fe");
-        outputbox13.setText("O");
-        outputbox14.setText("FeO"); 
-        System.out.println("nums printed");
+       //outputbox12.setText("Fe");
+      //  outputbox13.setText("O");
+       // outputbox14.setText("FeO"); 
+      //  System.out.println("nums printed");
        
 
     
@@ -93,6 +112,7 @@ public class BalancingAct extends javax.swing.JFrame {
         outputbox14 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        button1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -179,6 +199,13 @@ public class BalancingAct extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel4.setText(" →");
 
+        button1.setText("jButton1");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -240,6 +267,8 @@ public class BalancingAct extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(44, 44, 44)
+                                .addComponent(button1)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(53, 53, 53))))
             .addGroup(layout.createSequentialGroup()
@@ -253,7 +282,9 @@ public class BalancingAct extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button1))
                 .addGap(31, 31, 31)
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -324,7 +355,65 @@ public class BalancingAct extends javax.swing.JFrame {
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
        //numRuns = Integer.parseInt(inputbox11.getText());
        
-        rand = (int) (Math.random() * 5) + 1;
+        
+        
+        secondPush();
+        
+        runs++;
+       
+    //for (int i = 0; i < 10; i++)   { // remeber to fix for loop
+        
+        
+       
+ //this last code doesn't work and the numbers aren't saving or matching for any other ox, co, and form checks
+    
+        
+    }//GEN-LAST:event_button2ActionPerformed
+    
+    private void outputbox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputbox12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_outputbox12ActionPerformed
+
+    private void inputbox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputbox9ActionPerformed
+        
+        
+    }//GEN-LAST:event_inputbox9ActionPerformed
+
+    private void inputbox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputbox10ActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_inputbox10ActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+            firstPush();
+    }//GEN-LAST:event_button1ActionPerformed
+
+    
+    
+   /* public boolean isRepeated(int rand) {
+        boolean repeat = dontRepeat.length > rand;
+        for (int i = 0; i < dontRepeat.length; i++) {
+            if (rand == dontRepeat[i]) {
+                return true;
+            }
+            else    {
+                return false;
+            }
+        }
+        
+        return repeat;
+    }*/
+    
+    //I still don't know if this works
+    public int calculateAverage()   { 
+        int total = correct + incorrect;
+        int average = (correct / total) * 100;
+        return average;
+    }
+    
+    public String firstPush()   {
+
         
          String [] reactantOne = {
             "Fe",
@@ -348,18 +437,19 @@ public class BalancingAct extends javax.swing.JFrame {
             "result3",
             "result4",
             "result5"
-        };    
-       
+        }; 
         
         
-        
-        //dontRepeat = new int[reactantOne.length];
-        //numsPulled = 0;
-        
-        //for (int i = 0; i < numRuns; i++) {
-        
-        
-        //}
+        String r = "r";
+        rand = (int) (Math.random() * 5) + 1;
+        outputbox12.setText(reactantOne[rand]);
+        outputbox13.setText(reactantTwo[rand]);
+        outputbox14.setText(productOne[rand]); 
+        System.out.println("nums printed");
+        return r;
+    }
+    
+    public String secondPush ()    {
         
         String [] coefficient1 = {
             "1",
@@ -433,16 +523,8 @@ public class BalancingAct extends javax.swing.JFrame {
             "5"
         };
         
-        outputbox12.setText(reactantOne[rand]);
-        outputbox13.setText(reactantTwo[rand]);
-        outputbox14.setText(productOne[rand]); 
-        System.out.println("nums printed");
+        String f = "f";
         
-       
-    //for (int i = 0; i < 10; i++)   { // remeber to fix for loop
-        
-        
-       
         answerCoOne = inputBox1.getText();
         answerCoTwo = inputBox2.getText();
         answerCoThree = inputBox3.getText();
@@ -468,62 +550,11 @@ public class BalancingAct extends javax.swing.JFrame {
 
         System.out.println("time through");
         
-    //if (i == numRuns) {
-    //        label2.setText("Your final score is " + avg + "%. Reopen the window to restart.");
-    //   }
-    //}
-        
-        avg = calculateAverage(correct, incorrect);
+        avg = calculateAverage();
             System.out.println(avg);
             label2.setText("Your average score is " + avg + "%");
-        
-        
-    
-     //this last code doesn't work and the numbers aren't saving or matching for any other ox, co, and form checks
-    
-        
-    }//GEN-LAST:event_button2ActionPerformed
-    
-    private void outputbox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputbox12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_outputbox12ActionPerformed
 
-    private void inputbox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputbox9ActionPerformed
-        
-        
-    }//GEN-LAST:event_inputbox9ActionPerformed
-
-    private void inputbox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputbox10ActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_inputbox10ActionPerformed
-
-    
-    
-   /* public boolean isRepeated(int rand) {
-        boolean repeat = dontRepeat.length > rand;
-        for (int i = 0; i < dontRepeat.length; i++) {
-            if (rand == dontRepeat[i]) {
-                return true;
-            }
-            else    {
-                return false;
-            }
-        }
-        
-        return repeat;
-    }*/
-    
-    //I still don't know if this works
-    public int calculateAverage(int correct, int incorrect)   { 
-        int total = correct + incorrect;
-        int average = (correct / total) * 100;
-        return average;
-    }
-    
-    public String firstPush()   {
-        
+        return f;
     }
     
     
@@ -564,6 +595,7 @@ public class BalancingAct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton button1;
     private javax.swing.JButton button2;
     private javax.swing.JTextField inputBox1;
     private javax.swing.JTextField inputBox2;
