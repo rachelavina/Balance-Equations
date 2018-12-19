@@ -25,24 +25,23 @@ public class BalancingAct extends javax.swing.JFrame {
     String[] formula1;
     String[] formula2;
     String[] formula3;
+    String[] formula4;
     String form1;
     String form2;
     String form3;
+    String form4;
     String[] oxidation1;
     String[] oxidation2;
     String[] oxidation3;
+    String [] oxidation4;
     String ox1;
     String ox2;
     String ox3;
+    String ox4;
     
     int correct;
     int incorrect;
-  
-    String [] formula4;
-    String [] oxidation4;
-    String ox4;
-    String form4;
-    
+
     int score = 0;
     
     
@@ -89,7 +88,7 @@ public class BalancingAct extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 24)); // NOI18N
         jLabel1.setText("Balancing Chemistry Equations");
 
         inputBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +133,7 @@ public class BalancingAct extends javax.swing.JFrame {
             }
         });
 
-        label2.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
+        label2.setFont(new java.awt.Font("Rockwell", 0, 36)); // NOI18N
         label2.setText("Score: ");
 
         button2.setText("Submit");
@@ -144,7 +143,7 @@ public class BalancingAct extends javax.swing.JFrame {
             }
         });
 
-        label7.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        label7.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         label7.setText("Hit the button for a new random equation.");
 
         inputbox9.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +158,7 @@ public class BalancingAct extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Yu Gothic Light", 0, 14)); // NOI18N
         jLabel3.setText("Remember to put positive and negative signs with the oxidation numbers");
 
         outputbox12.addActionListener(new java.awt.event.ActionListener() {
@@ -220,24 +219,25 @@ public class BalancingAct extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(inputbox11, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(90, 90, 90))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(label7, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                .addComponent(label7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(submit)
                 .addGap(144, 144, 144))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(153, 153, 153))
+                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(155, 155, 155))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(107, 107, 107))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -249,58 +249,53 @@ public class BalancingAct extends javax.swing.JFrame {
                                 .addComponent(inputbox12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(52, 52, 52)
                                 .addComponent(inputBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(53, 53, 53))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(155, 155, 155))))
+                                .addGap(53, 53, 53))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(submit))
-                .addGap(31, 31, 31)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(inputbox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputbox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputbox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputbox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputbox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputbox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(inputBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(outputbox14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(inputBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(outputbox12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(inputBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(outputbox13, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputbox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(74, 74, 74)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(27, 27, 27)
-                        .addComponent(button2))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(inputBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(outputbox14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(inputBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(outputbox12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(inputBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(outputbox13, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(inputbox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
+                        .addGap(76, 76, 76)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(inputBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addComponent(jLabel4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGap(56, 56, 56)
+                .addComponent(button2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
         );
@@ -338,7 +333,6 @@ public class BalancingAct extends javax.swing.JFrame {
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
 
-        
         secondPush();
          if (secondPush() == true) {
           score +=  10;   
@@ -346,10 +340,8 @@ public class BalancingAct extends javax.swing.JFrame {
          }
          else   {
              score -= 10;
-             label2.setText("Score: " + score); // make sure 'Score' doesn't print twice
+             label2.setText("Score: " + score);
          }
-        
-     
         
     }//GEN-LAST:event_button2ActionPerformed
     
@@ -372,7 +364,6 @@ public class BalancingAct extends javax.swing.JFrame {
 
     public String firstPush()   {
 
-        
          String [] reactantOne = {
             "Na",
             "H",
@@ -381,7 +372,19 @@ public class BalancingAct extends javax.swing.JFrame {
             "Fe",
             "K",
             "NO",
-            "Mg"
+            "Mg",
+            "Al",
+            "CO",
+            "Na",
+            "Ra",
+            "Pb",
+            "S",
+            "Si",
+            "Zn",
+            "Al",
+            "Sn",
+            "Li",
+            "Be"
         };
         
         String [] reactantTwo = {
@@ -392,6 +395,18 @@ public class BalancingAct extends javax.swing.JFrame {
            "S",
            "Cl",
            "O",
+           "O",
+           "Br",
+           "O",
+           "O",
+           "Cl",
+           "I",
+           "O",
+           "Cl",
+           "O",
+           "Br",
+           "O",
+           "F",
            "O"
         };
        
@@ -403,16 +418,28 @@ public class BalancingAct extends javax.swing.JFrame {
             "FeS",
             "KCl",
             "NO",
-            "MgO"
+            "MgO",
+            "AlBr",
+            "CO",
+            "NaO",
+            "RaCl",
+            "PbI",
+            "SO",
+            "SiCl",
+            "ZnO",
+            "AlBr",
+            "SnO",
+            "LiF",
+            "BeO"
         }; 
         
         
         String r = "r";
-        rand = (int) (Math.random() * 9); // remeber this needs to be fixed/change
+        rand = (int) (Math.random() * 20);
         outputbox12.setText(reactantOne[rand]);
         outputbox13.setText(reactantTwo[rand]);
         outputbox14.setText(productOne[rand]); 
-        System.out.println("nums printed");
+        System.out.println("nums printed"); //delete before submiting to simplify
         return r;
     }
     
@@ -427,7 +454,19 @@ public class BalancingAct extends javax.swing.JFrame {
             "8",
             "2",
             "2",
-            "2"
+            "2",
+            "2",
+            "2",
+            "4",
+            "1",
+            "1",
+            "2",
+            "1",
+            "2",
+            "2",
+            "1",
+            "2",
+            "1"
         };
         
         String [] coefficient2 = {
@@ -436,6 +475,18 @@ public class BalancingAct extends javax.swing.JFrame {
             "1",
             "3",
             "1",
+            "1",
+            "1",
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "1",
+            "3",
+            "1",
+            "1",
+            "3",
             "1",
             "1",
             "1"
@@ -449,13 +500,37 @@ public class BalancingAct extends javax.swing.JFrame {
             "8",
             "2",
             "2",
-            "2"
+            "2",
+            "2",
+            "2",
+            "2",
+            "1",
+            "1",
+            "2",
+            "1",
+            "2",
+            "2",
+            "1",
+            "2",
+            "1"
         };
         
         String [] formula1 = {
             "1",
             "2",
             "2",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
             "1",
             "1",
             "1",
@@ -471,7 +546,19 @@ public class BalancingAct extends javax.swing.JFrame {
             "8",
             "2",
             "2",
-            "2"
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "1"
         };
         
         String [] formula3 = {
@@ -479,6 +566,18 @@ public class BalancingAct extends javax.swing.JFrame {
             "2",
             "1",
             "2",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "2",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
             "1",
             "1",
             "1",
@@ -493,10 +592,34 @@ public class BalancingAct extends javax.swing.JFrame {
             "1",
             "1",
             "2",
+            "1",
+            "3",
+            "2",
+            "1",
+            "2",
+            "2",
+            "3",
+            "2",
+            "1",
+            "3",
+            "2",
+            "1",
             "1"
         };
         
         String [] oxidation1 = {
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
             "0",
             "0",
             "0",
@@ -515,6 +638,18 @@ public class BalancingAct extends javax.swing.JFrame {
             "0",
             "0",
             "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
             "0"
         };
          
@@ -526,18 +661,42 @@ public class BalancingAct extends javax.swing.JFrame {
             "+2",
             "+1",
             "+4",
+            "+2",
+            "+3",
+            "+4",
+            "+1",
+            "+2",
+            "+2",
+            "+6",
+            "+2",
+            "+2",
+            "+3",
+            "+4",
+            "+1",
             "+2"
         };
         
         String [] oxidation4 = {
             "-2",
             "-2",
-            "+3",
+            "+1",
             "-2",
             "-1",
             "-1",
             "-2",
-            "-1"
+            "-1",
+            "-1",
+            "-2",
+            "-2",
+            "-1",
+            "-1",
+            "-2",
+            "-1",
+            "-2",
+            "-1",
+            "-2",
+            "-1",
+            "-2"
         };
         
         answerCoOne = inputBox1.getText();
@@ -552,8 +711,6 @@ public class BalancingAct extends javax.swing.JFrame {
         ox3 = inputbox10.getText();  
         ox4 = inputbox11.getText();
 
-
-            System.out.println("methods next");
             
             if (answerCoOne.equals(coefficient1[rand]) && answerCoTwo.equals(coefficient2[rand]) && answerCoThree.equals(coefficient3[rand]) && form1.equals(formula1[rand]) && form2.equals(formula2[rand]) && form3.equals(formula3[rand]) && form4.equals(formula4[rand]) && ox1.equals(oxidation1[rand]) && ox2.equals(oxidation2[rand]) && ox3.equals(oxidation3[rand]) && ox4.equals(oxidation4[rand])) {
                System.out.println("correct");
