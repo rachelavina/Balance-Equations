@@ -43,7 +43,9 @@ public class BalancingAct extends javax.swing.JFrame {
     int incorrect;
 
     int score = 0;
-    
+    int repeat[];
+   
+    int runs = 0;
     
     /**
      * Creates new form BalancingAct
@@ -51,7 +53,7 @@ public class BalancingAct extends javax.swing.JFrame {
     public BalancingAct() {
         initComponents();
         
-    
+        repeat = new int [20];
     }
 
     /**
@@ -362,6 +364,7 @@ public class BalancingAct extends javax.swing.JFrame {
              label2.setText("Score: " + score);
          }
         
+        
     }//GEN-LAST:event_button2ActionPerformed
     
     private void outputbox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputbox12ActionPerformed
@@ -377,12 +380,12 @@ public class BalancingAct extends javax.swing.JFrame {
     }//GEN-LAST:event_inputbox10ActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-            firstPush();
-            
+            firstPush();    
     }//GEN-LAST:event_submitActionPerformed
 
     public String firstPush()   {
 
+        
          String [] reactantOne = {
             "Na",
             "H",
@@ -453,11 +456,17 @@ public class BalancingAct extends javax.swing.JFrame {
         }; 
         
         
-        String r = "r";
         rand = (int) (Math.random() * 20);
-        outputbox12.setText(reactantOne[rand]);
-        outputbox13.setText(reactantTwo[rand]);
-        outputbox14.setText(productOne[rand]); 
+        
+        while (isRepeated())   {
+            rand = (int) (Math.random() * 20);
+        }
+              outputbox12.setText(reactantOne[rand]);
+              outputbox13.setText(reactantTwo[rand]);
+              outputbox14.setText(productOne[rand]);   
+        repeat[runs] = rand;
+        runs++;
+        String r = "r";
         return r;
     }
     
@@ -741,6 +750,15 @@ public class BalancingAct extends javax.swing.JFrame {
             }    
     }
     
+    public boolean isRepeated() {
+         for (int i = 0; i < runs; i++) {
+            if (repeat[i] == rand) {
+                System.out.println("Catch");
+             return true;   
+                }
+            }
+         return false;
+    }
     
     
     /**
